@@ -1,4 +1,33 @@
+playlist = []
 
+function addSong() {
+    let title = document.getElementById("songTitle").value;
+    let artist = document.getElementById("artist").value;
+    let duration = document.getElementById("duration").value;
+
+
+    
+    const Song = {
+        songTitle: title,
+        songArtist: artist,
+        songDuration: duration
+
+    }  
+
+    playlist.push(Song); 
+
+    document.getElementById('songTitle').value = '';
+    document.getElementById('artist').value = '';
+    document.getElementById('duration').value = '';
+    
+    if (title == "" || artist == "" || duration == "") {
+        alert("Fill in All the Boxes")
+    }
+    else{
+        displayPlaylist()
+    }
+
+   }
 
 
 
